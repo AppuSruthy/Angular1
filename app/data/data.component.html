@@ -1,0 +1,56 @@
+
+ <h3>Employee Details...</h3>
+ <hr>Employee name is<b> {{Name}}</b>
+ <h4>Age:<b>{{Age}}</b></h4>
+<h4>Email:<b>{{Email}}</b></h4>
+<h4>Permanent Address:{{Address.Hname}},{{Address.Street}},{{Address.location}}</h4>
+Hobbies:<ul>
+  <li *ngFor="let hb of Hobbies">
+    {{hb}}
+  </li>
+</ul>
+<table border=1>
+  <tr>
+    <td *ngFor="let i of Hobbies">
+      {{i}}
+    </td>
+  </tr>
+</table>
+<table border=1>
+  <tr>
+    <td>Project name</td>
+    <td>Department</td>
+    <td>Status</td>
+  </tr>
+<tr *ngFor="let j of Project;let i=index">
+
+<td>{{j.Title}}</td>
+<td>{{j.Dept}}</td>
+<td>{{j.Status}}</td>
+<td><input type="button" value="x" (click)="del(j,i)"></td>
+</tr>
+<tr>
+  <td>
+    {{Title}}
+  </td>
+  <td>{{Department}}</td>
+  <td>{{Status}}</td>
+</tr>
+<tr>
+  <input type="button" value="Add" (click)="Add()">
+</tr>
+</table>
+<table>
+  <tr>
+    <td>Title</td>
+    <td><input type="text" name="title" [(ngModel)]="Title"></td>
+  </tr>
+  <tr>
+    <td>Department</td>
+    <td><input type="text" name="dept" [(ngModel)]="Department"></td>
+  </tr>
+  <tr>
+    <td>Status</td>
+    <td><input type="text" name="status" [(ngModel)]="Status"></td>
+  </tr>
+</table>

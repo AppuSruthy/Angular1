@@ -1,0 +1,10 @@
+<p>
+  cart works!
+</p>
+<table *ngIf="show"><tr  *ngFor="let p of products;let i=index"><td>{{p}}</td>
+<td><input type="button" value="x" (click)="del(i)"></td></tr></table>
+  
+<h1>New product is </h1><input type="text" name="uttname" [(ngModel)]="pname">
+<h1>New product is </h1>{{pname}}
+<input type="button" value="Add  Products" (click)="Add()">
+<input type="button" value="show" (click)="Toggle()">

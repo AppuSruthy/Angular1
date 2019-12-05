@@ -1,0 +1,29 @@
+<table>
+  <tr><th>Enter Employee Details</th></tr>
+  <tr><td>Name</td>
+  <td><input type="text" name="txtNmae" [(ngModel)]="name" ></td></tr>
+  <tr><td>Age</td>
+    <td><input type="text" name="txtage" [(ngModel)]="age" ></td></tr>
+    <tr><td>DOB</td>
+      <td><input type="text" name="txtdob" [(ngModel)]="dob" ></td></tr>
+      <tr><td>Email</td>
+        <td><input type="text" name="txtEmail" [(ngModel)]="email" ></td></tr>
+        <tr><td></td>
+          <td><input type="button" value="Add Employee" (click)="add()"></td>
+        </tr>
+       </table>
+              
+
+
+
+ <table border=1 *ngFor="let i of employee">
+  <tr><th>Employee Details</th></tr>
+  <tr><th>Name</th><th>Age</th><th>DOB</th><th>Email</th></tr>
+ <tr> <td>{{name}}</td>
+ 
+    <td>{{age}}</td>
+ 
+      <td>{{dob}}</td>
+     
+        <td>{{email}}</td></tr>
+</table> 
